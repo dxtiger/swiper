@@ -120,7 +120,7 @@ function Scrolls(opt){
 			if(pre){
 				pre.addEventListener('webkitTransitionEnd',function(){
 		            cb(c);
-					setCurrent(n);
+					setCurrent(c,c-n);
 		            pre.removeEventListener('webkitTransitionEnd',arguments.callee,false);
 		            state = false;
 		        },false);
@@ -250,6 +250,7 @@ function Scrolls(opt){
 		  		steps[i].style.cssText = style.on;
 		  	}
 		}
+		setCurrent(m,c)
 		c = m;
 	}
 	function resize(){
